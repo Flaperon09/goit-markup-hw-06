@@ -404,20 +404,27 @@
           </ul>
         </div>
         <form class="footer-submit">
-          <label class="text-social">
+          <label for="footer-input" class="text-social">
             Підпишіться на розсилку
-          </label for="footer-input">
-          <input class="footer-input" type="email" name="email" id="footer-input" placeholder="E-mail"/>
-          
+          </label>
+          <div class="footer-div">
+            <input
+              class="footer-input"
+              type="email"
+              name="email"
+              id="footer-input"
+              placeholder="E-mail"
+            />
+            <button class="footer-button" type="submit">
+              Підписатися
+              <span class="footer-span">
+                <svg class="footer-send" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
         </form>
-        <button class="footer-button" type="submit">
-            Підписатися
-            <span class="footer-span">
-              <svg class="footer-send" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-            </span>
-          </button>
       </div>
     </footer>
 
@@ -467,11 +474,16 @@
               name="contract"
               value="contract"
             />
-            <span class="checkbox-icon"></span>
-            <p>
+            <span class="checkbox-icon">
+              <svg class="icon-checked" width="16px" height="15px">
+                <use href="./images/icons.svg#icon-checked"></use>
+              </svg>
+            </span>
+
+            <span class="checkbox-text">
               Погоджуюся з розсилкою та приймаю
               <span><a href="" class="link-contract">Умови договору</a></span>
-            </p>
+            </span>
           </label>
 
           <button class="submit" type="submit">Відправити</button>

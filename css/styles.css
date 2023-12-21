@@ -366,7 +366,8 @@ li > p
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-close:hover {
+.icon-close:hover,
+.button-close:focus .icon-close {
     fill: var(--color-accent);
 }
 
@@ -453,9 +454,10 @@ li > p
     align-items: center;
     margin-left: 12px;
     margin-top: 20px;
+
 }
 
-.form-checkbox p {
+.checkbox-text {
     margin: 0 0 0 7px;
 }
 
@@ -497,18 +499,26 @@ li > p
 }
 
 .checkbox-icon {
-    display: inline-block;
+    display: flex;
     width: 16px;
     height: 15px;
     border: 1px solid var(--color-header);
     border-radius: 2px;
+    align-items: center;
+    justify-items: center;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:focus + .checkbox-icon {
+    border-color: var(--color-accent);
 }
 
 .checkbox:checked + .checkbox-icon {
     background-color: var(--color-accent);
     border-color: var(--color-accent);
-    background-image: url(../images/checked.svg);
-    /* background-image: url(../images/icons.svg#icon-checked); */
     background-size: contain;
     background-origin: border-box;
 }
@@ -927,8 +937,12 @@ li > p
 }
 
 .footer-submit {
+    display: block;
     margin-left: 93px;
 }
+ .footer-div {
+    display: flex;
+ }
 
 .footer-input {
     width: 358px;
@@ -951,9 +965,9 @@ li > p
 }
 
 .footer-button {
-    position: absolute;
+    /* position: absolute;
     top: 48px;
-    right: 15px;
+    right: 15px; */
 
     display: flex;
     align-items: center;
